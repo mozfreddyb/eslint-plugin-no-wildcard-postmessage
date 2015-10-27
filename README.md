@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mozfreddyb/eslint-plugin-no-wildcard-postmessage.svg?branch=master)](https://travis-ci.org/mozfreddyb/eslint-plugin-no-wildcard-postmessage)
+
 # Disallow wildcard targets for postMessage (no-wildcard-postmessage)
 
 This function disallows unsafe coding practices that may result into security vulnerabilities.
