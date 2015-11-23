@@ -34,7 +34,12 @@ eslintTester.run("no-wildcard-postmessage", rule, {
         {
             code: "frame.postMessage(obj, 'http://domain.tld');",
             ecmaFeatures: features
+        },
+        {   // iife
+            code: "(function() {})()",
+            ecmaFeatures: features
         }
+
 
     ],
 
