@@ -28,7 +28,7 @@ eslintTester.run("no-wildcard-postmessage", rule, {
       ecmaFeatures: features
     },
     {
-      code: 'frame.postMessage(obj, "http://domain.tld");',
+      code: "frame.postMessage(obj, 'http://domain.tld');",
       ecmaFeatures: features
     },
     {
@@ -54,7 +54,7 @@ eslintTester.run("no-wildcard-postmessage", rule, {
       ecmaFeatures: features
     },
     {
-      code: 'postMessage(obj, "*");',
+      code: "postMessage(obj, '*');",
       errors: [{
         message: "Using postMessage() with wildcard targets is not allowed.",
         type: "CallExpression"
@@ -62,7 +62,7 @@ eslintTester.run("no-wildcard-postmessage", rule, {
       ecmaFeatures: features
     },
     {
-      code: 'win.postMessage(obj, "*");',
+      code: "win.postMessage(obj, '*');",
       errors: [{
         message: "Using postMessage() with wildcard targets is not allowed.",
         type: "CallExpression"
