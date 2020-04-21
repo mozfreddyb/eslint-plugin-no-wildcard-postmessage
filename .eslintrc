@@ -1,27 +1,17 @@
 {
-    "rules": {
-        "indent": [
-            2,
-            2
-        ],
-        "quotes": [
-            2,
-            "double"
-        ],
-        "linebreak-style": [
-            2,
-            "unix"
-        ],
-        "semi": [
-            2,
-            "always"
-        ]
-    },
-    "env": {
-        "es6": true,
-        "browser": true,
-        "node": true,
-    },
-    "extends": "eslint:recommended"
+  "extends": ["eslint:recommended", "plugin:node/recommended"],
+  "rules": {
+    "indent": ["error", 2],
+    "quotes": ["error", "double"],
+    "linebreak-style": ["error", "unix"],
+    "semi": ["error", "always"]
+  },
+  "overrides": [
+    {
+      "files": ["tests/**/*.js"],
+      "rules": {
+        "node/no-unpublished-require": "off"
+      }
+    }
+  ]
 }
-

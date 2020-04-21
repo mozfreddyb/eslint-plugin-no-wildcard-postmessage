@@ -8,14 +8,14 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-var rule = require("../../lib/rules/no-wildcard-postmessage.js");
-var RuleTester = require("eslint").RuleTester;
+const rule = require("../../lib/rules/no-wildcard-postmessage.js");
+const { RuleTester } = require("eslint");
 
 //------------------------------------------------------------------------------
 // Tests
 //------------------------------------------------------------------------------
 
-var eslintTester = new RuleTester();
+const eslintTester = new RuleTester();
 
 eslintTester.run("no-wildcard-postmessage", rule, {
   valid: [
