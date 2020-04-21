@@ -35,13 +35,6 @@ eslintTester.run("no-wildcard-postmessage", rule, {
       }],
     },
     {
-      code: "postMessage(obj, '*');",
-      errors: [{
-        message: "Using postMessage() with wildcard targets is not allowed.",
-        type: "CallExpression"
-      }],
-    },
-    {
       code: "win.postMessage(obj, '*');",
       errors: [{
         message: "Using postMessage() with wildcard targets is not allowed.",
