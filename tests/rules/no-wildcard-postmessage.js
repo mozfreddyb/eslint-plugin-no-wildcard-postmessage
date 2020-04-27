@@ -1,6 +1,6 @@
 /**
  * @fileoverview Test for no-wildcard-postmessage.js rule
- * @author Frederik Braun
+ * @author eslint-plugin-no-wildcard-postmessage contributors
  * @copyright 2015 Mozilla Corporation. All rights reserved
  */
 

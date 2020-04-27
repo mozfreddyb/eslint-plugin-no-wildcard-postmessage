@@ -2,9 +2,7 @@
   "name": "eslint-plugin-no-wildcard-postmessage",
   "description": "custom ESLint rule to disallows calling postMessage to wildcard targets",
   "version": "0.1.3",
-  "author": {
-    "name": "Frederik Braun"
-  },
+  "author": "eslint-plugin-no-wildcard-postmessage contributors",
   "bugs": {
     "url": "https://github.com/mozfreddyb/eslint-plugin-no-wildcard-postmessage/issues"
   },
