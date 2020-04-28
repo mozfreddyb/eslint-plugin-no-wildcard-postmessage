@@ -1,7 +1,6 @@
-/* global require */
 /**
  * @fileoverview Test for no-wildcard-postmessage.js rule
- * @author Frederik Braun
+ * @author eslint-plugin-no-wildcard-postmessage contributors
  * @copyright 2015 Mozilla Corporation. All rights reserved
  */
 
@@ -9,38 +8,21 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-var rule = require("../../lib/rules/no-wildcard-postmessage.js");
-var RuleTester = require("eslint").RuleTester;
+const rule = require("../../lib/rules/no-wildcard-postmessage.js");
+const { RuleTester } = require("eslint");
 
 //------------------------------------------------------------------------------
 // Tests
 //------------------------------------------------------------------------------
 
-var eslintTester = new RuleTester();
-
-var features = { templateStrings: true, spread: true };
+const eslintTester = new RuleTester();
 
 eslintTester.run("no-wildcard-postmessage", rule, {
-
   valid: [
-    {
-      code: "postMessage(obj);",
-      ecmaFeatures: features
-    },
-    {
-      code: "frame.postMessage(obj, 'http://domain.tld');",
-      ecmaFeatures: features
-    },
-    {
-      code: "frame.postMessage(obj, 'http://domain.tld');",
-      ecmaFeatures: features
-    },
-    {   // iife
-      code: "(function() {})()",
-      ecmaFeatures: features
-    }
-
-
+    "postMessage(obj);",
+    "frame.postMessage(obj, 'http://domain.tld');",
+    "frame.postMessage(obj, 'http://domain.tld');",
+    "(function() {})()",
   ],
 
   // Examples of code that should trigger the rule
@@ -51,15 +33,6 @@ eslintTester.run("no-wildcard-postmessage", rule, {
         message: "Using postMessage() with wildcard targets is not allowed.",
         type: "CallExpression"
       }],
-      ecmaFeatures: features
-    },
-    {
-      code: "postMessage(obj, '*');",
-      errors: [{
-        message: "Using postMessage() with wildcard targets is not allowed.",
-        type: "CallExpression"
-      }],
-      ecmaFeatures: features
     },
     {
       code: "win.postMessage(obj, '*');",
@@ -67,7 +40,6 @@ eslintTester.run("no-wildcard-postmessage", rule, {
         message: "Using postMessage() with wildcard targets is not allowed.",
         type: "CallExpression"
       }],
-      ecmaFeatures: features
     }
   ]
 });
