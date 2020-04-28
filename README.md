@@ -24,4 +24,4 @@ postMessage(obj);
 ```
 
 
-This rule is being used within Mozilla to maintain and improve the security of the Firefox OS front-end codebase *Gaia*. Further documentation, which includes references to the escaping functions can be found on [MDN](https://developer.mozilla.org/en-US/Firefox_OS/Security/Security_Automation).
+This rule is being used within Mozilla to maintain and improve the security of various front-end codebases.
